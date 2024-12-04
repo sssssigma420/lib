@@ -5518,4 +5518,26 @@ function UILibrary.Section:Dropdown(sett, callback)
     return meta
 end
 
+local UILibrary = {} -- Assuming this is your existing library
+
+-- Function to toggle the GUI visibility
+function UILibrary:ToggleGUI()
+    if self.MainUI and self.MainUI.Visible then
+        self.MainUI.Visible = false -- Close the GUI
+    else
+        self.MainUI.Visible = true -- Open the GUI
+    end
+end
+
+-- Example of how to bind the toggle function to a key press (e.g., the "G" key)
+local UserInputService = game:GetService("User InputService")
+
+User InputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if not gameProcessedEvent then
+        if input.KeyCode == Enum.KeyCode.G then
+            UILibrary:ToggleGUI() -- Call the toggle function
+        end
+    end
+end)
+
 return UILibrary
