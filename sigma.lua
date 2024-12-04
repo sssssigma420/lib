@@ -1209,8 +1209,8 @@ local function getObjGen()
             Gui.Watermark.BackgroundTransparency = 1.000
             Gui.Watermark.Size = UDim2.new(0.5, 0, 0.0199999996, 0)
             Gui.Watermark.Font = Enum.Font.Gotham
-            Gui.Watermark.Text = "hydrahub v2 | nil | nil"
-            Gui.Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Gui.Watermark.Text = "niggasense beta | nil | nil"
+            Gui.Watermark.TextColor3 = Color3.fromRGB(51, 102, 153)
             Gui.Watermark.TextSize = 14.000
             Gui.Watermark.TextStrokeTransparency = 0.800
             Gui.Watermark.TextXAlignment = Enum.TextXAlignment.Left
@@ -1225,7 +1225,7 @@ local function getObjGen()
             Gui.MainUI.Name = "MainUI"
             Gui.MainUI.Parent = Gui.Window
             Gui.MainUI.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.MainUI.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+            Gui.MainUI.BackgroundColor3 = Color3.fromRGB(0, 50, 255)
             Gui.MainUI.Position = UDim2.new(0.5, 0, 0.5, 0)
             --Gui.MainUI.Size = UDim2.new(0.47, 0, 0.75, 0)
             Gui.MainUI.Size = UDim2.new(0, 851, 0, 488)
@@ -5516,25 +5516,6 @@ function UILibrary.Section:Dropdown(sett, callback)
         ][sett.Title] = meta
 
     return meta
-end
-
-function UILibrary:ToggleGUI()
-    if self.MainUI and self.MainUI.Visible then
-        self.MainUI.Visible = false -- Close the GUI
-    else
-        self.MainUI.Visible = true -- Open the GUI
-    end
-end
-
--- Example of how to bind the toggle function to a key press (e.g., the "G" key)
-local UserInputService = game:GetService("User InputService")
-
-User InputService.InputBegan:Connect(function(input, gameProcessedEvent)
-    if not gameProcessedEvent then
-        if input.KeyCode == Enum.KeyCode.G then
-            UILibrary:ToggleGUI() -- Call the toggle function
-        end
-    end
 end
 
 return UILibrary
