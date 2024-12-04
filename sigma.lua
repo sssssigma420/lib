@@ -5516,5 +5516,6 @@ function UILibrary.Section:Dropdown(sett, callback)
         ][sett.Title] = meta
 
     return meta
+end
 
 return UILibrary
