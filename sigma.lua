@@ -1225,7 +1225,7 @@ local function getObjGen()
             Gui.MainUI.Name = "MainUI"
             Gui.MainUI.Parent = Gui.Window
             Gui.MainUI.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.MainUI.BackgroundColor3 = Color3.fromRGB(0, 50, 255)
+            Gui.MainUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Gui.MainUI.Position = UDim2.new(0.5, 0, 0.5, 0)
             --Gui.MainUI.Size = UDim2.new(0.47, 0, 0.75, 0)
             Gui.MainUI.Size = UDim2.new(0, 851, 0, 488)
