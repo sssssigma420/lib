@@ -5518,9 +5518,6 @@ function UILibrary.Section:Dropdown(sett, callback)
     return meta
 end
 
-local UILibrary = {} -- Assuming this is your existing library
-
--- Function to toggle the GUI visibility
 function UILibrary:ToggleGUI()
     if self.MainUI and self.MainUI.Visible then
         self.MainUI.Visible = false -- Close the GUI
@@ -5538,6 +5535,6 @@ User InputService.InputBegan:Connect(function(input, gameProcessedEvent)
             UILibrary:ToggleGUI() -- Call the toggle function
         end
     end
-end)
+end
 
 return UILibrary
